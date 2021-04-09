@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="survey_form.css" />
+	<title></title>
+</head>
+<body>
+	<h1 id="title"> freeCodeCamp Survey Form </h1>
+	<p id="description"> Thank you for taking the time to help us improve the platform </p>
+	<form id="survey-form">	
+		<div id="form" method="post" action="formulaire">
+				<p>
+					<label for="name" id="name-label"> <strong>*Quel est votre nom ?</strong></label><br/>
+					<input class ="input" type="text" name="name" id="name" placeholder="Enter Your Name" required autofocus/>
+				</p>
+				<p>
+					<label for="email" id="email-label"> <strong>*Quel est votre email ? </strong></label><br/>
+					<input class ="input" type="email" name="email" id="email" placeholder="Enter Your Email" required />
+				</p>
+				<p>
+					<label for="age" id="number-label"> <strong>Quel est votre age ?</strong> (optional) </label><br/>
+					<input class ="input" type="number" min="0" max="120" name="age" id="number" placeholder="Enter Your Age" /> <br/>
+				<P>
+					<label for="dropdown"> <strong>Which option best describes your current role?</strong><br/>
+					<select class ="input" name="dropdown" id="dropdown" >
+           				<option value="Student">Student</option>
+           				<option value="Full-Time job">Full-Time job</option>
+           				<option value="Full-Time student">Full-Time student</option>
+           				<option value="Prefer not to say">Prefer not to say</option>
+           				<option value="Other">Other</option>          
+       				</select>
+       			<p>
+       				<label for="name" > <strong>Would you recommend freeCodeCamp to a friend?</strong><br/>
+       				<input type="radio" name="name" class="input2" value="definitly"> <label>Definitly</label>	<br/>
+       				<input type="radio" name="name" value="maybe"> <label>Maybe</label>	<br/>
+       				<input type="radio" name="name" value="Not-sure"> <label>Not sure</label> <br/>
+       			</p>
+
+       			<p>
+       				  <label for="checkbox" > <strong>What is your favorite feature of freeCodeCamp? </strong><br />
+       				<input type="checkbox" name="frites" class="input2" id="frites" value="front" /> <label for="frites">Front End project</label><br />
+       				<input type="checkbox" name="steak" id="steak" value="back" /> <label for="steak" >Back End project</label><br />
+       				<input type="checkbox" name="epinards" id="epinards" value="full" /> <label for="epinards" >Full-Stack</label><br />
+       				<input type="checkbox" name="huitres" id="huitres" value="soft"/> <label for="huitres">Software developer</label><br/>
+       			    <input type="checkbox" name="huitres" id="huitres" value="ios"/> <label for="huitres">IOS developer</label><br/>
+       			    <input type="checkbox" name="huitres" id="huitres" value="android" /> <label for="huitres">Android developer</label><br/>
+   				</p>
+   				<p>
+       				<label for="textarea" class="input2">Any comments or suggestions?</label><br />
+       				<textarea name="ameliorer" class="input2" id="textarea"></textarea>
+   				</p>
+				<P>
+					<button id="submit"> Submit </button>
+				</p>
+
+				
+
+			</div>
+
+
+	</form>
+
+</body>
+</html>
