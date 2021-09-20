@@ -1,0 +1,72 @@
+.SignUpPage {
+	position: absolute;
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: all 0.4s;
+
+	&.darken {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	.SignUp {
+		position: relative;
+
+		background-color: var(--secondary);
+		border-radius: 28px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		width: 500px;
+		padding: 30px 0;
+
+		transform: scale3d(0, 0, 0);
+		transition: all 0.4s;
+
+		#closeIcon{
+			position: absolute;
+			top: 8px;
+			right: 10px;
+			font-size: 2rem;
+			cursor: pointer;
+			transition: all 0.3s;
+			color: var(--violet);
+
+			&:hover{
+				color: #37419f;
+				transform: rotate(180deg);
+			}
+
+			//prevent target is path between icon
+			path{
+				pointer-events: none;
+			}
+		}
+
+		&.scale1 {
+			transform: scale3d(1, 1, 1);
+		}
+
+		/*-------------Childrens-------------*/
+		input {
+			background-color: var(--primary);
+			color: white;
+			&:not(:invalid):focus {
+				border: 1px solid white;
+			}
+
+			//prevent default autofill from
+			&:-webkit-autofill {
+				transition: background-color 5000s;
+			}
+			&:-webkit-autofill::first-line {
+				color: white;
+			}
+		}
+	}
+}

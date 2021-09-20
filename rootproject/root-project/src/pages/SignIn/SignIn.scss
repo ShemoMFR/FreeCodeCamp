@@ -1,0 +1,118 @@
+.SignIn {
+	background-color: var(--primary);
+	border-radius: 28px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	min-width: 500px;
+	padding: 30px 0;
+
+	/*-------------Childrens-------------*/
+
+	/*--Input email/password--*/
+	.password {
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		.eye {
+			position: absolute;
+			right: 6px;
+			font-size: 2rem;
+			color: black;
+			cursor: pointer;
+			transition: all 0.3s;
+			
+			animation: rotateEyePassWord 0.3s forwards;
+			&:hover {
+				color: var(--violet);
+			}
+		}
+	}
+
+	.forgetLink {
+		align-self: flex-end;
+		color: #aeaeae;
+		font-size: 0.8rem;
+		margin-top: -10px;
+	}
+
+	/*--Button Submit--*/
+	button[type='submit'] {
+		align-self: flex-start;
+	}
+
+	/*--OU Separation--*/
+	.ou {
+		font-size: 2rem;
+		position: relative;
+		margin: 30px 0;
+	}
+
+	.ou::before,
+	.ou::after {
+		position: absolute;
+		top: 50%;
+		content: '';
+		width: 0px;
+		height: 2px;
+		background-color: white;
+		display: inline-block;
+		margin: 0 20px;
+		animation: barOuAnimation 3s forwards ease-out;
+	}
+
+	.ou::before {
+		right: 40px;
+	}
+	.ou::after {
+		left: 40px;
+	}
+
+	/*--Google/Github Buttons--*/
+	.btn-connect {
+		margin-bottom: 15px;
+		border: none;
+		width: 380px;
+		padding: 5px;
+		font-size: 1rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		position: relative;
+		border-radius: 2px;
+		letter-spacing: 1px;
+
+		.icons {
+			position: absolute;
+			left: 5px;
+			top: 0;
+			font-size: 2rem;
+		}
+
+		&.dark {
+			background-color: #24292d;
+			color: white;
+			.icons {
+				font-size: 1.9rem;
+			}
+		}
+	}
+
+	/*--SignUp Button--*/
+	.signUpButton {
+		color: var(--green);
+		font-size: 1.2rem;
+		margin-top: 30px;
+		letter-spacing: 1px;
+		border: none;
+		background-color: transparent;
+		transition: all 0.5s;
+
+		&:hover {
+			color: var(--violet);
+		}
+	}
+}

@@ -1,0 +1,51 @@
+//Global Variable
+:root {
+	--primary: #22303f;
+	--secondary: #17232e;
+	--violet: #5765f2;
+	--green: #6cd55e;
+}
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+/*font-family: 'Azeret Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+
+* {
+	box-sizing: border-box;
+}
+
+input,
+button {
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+button:active {
+	transform: translateY(2px);
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	color: white;
+	background-color: var(--secondary);
+	font-family: 'Azeret Mono', monospace;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}

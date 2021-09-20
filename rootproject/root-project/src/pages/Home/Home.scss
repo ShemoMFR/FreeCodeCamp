@@ -1,0 +1,119 @@
+.Home {
+	//Background
+	background: linear-gradient(108deg, black 2%, var(--primary) 40%, var(--secondary) 43%);
+	background-size: 300%;
+	height: 100%;
+	animation: backGroundAnim 5s ease-out forwards,
+		backGroundMovement 5s 5s infinite ease-in-out;
+
+	//Display
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	transition: all 0.5s;
+
+	//Title Form
+	.title {
+		font-size: 2rem;
+		margin-bottom: 30px;
+	}
+
+	//Form
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 468px;
+	}
+
+	//Input Form
+	input {
+		border: solid 1px transparent;
+		border-radius: 32px;
+		padding: 10px;
+		font-size: 1.1rem;
+		margin: 20px 0;
+		width: 100%;
+		transition: all 0.5s;
+
+		//Check valid or invalid input
+		&:not(:placeholder-shown):invalid {
+			border: solid 1px red;
+		}
+
+		&:not(:placeholder-shown):valid {
+			border: solid 1px var(--green);
+		}
+
+		//prevent default autofill from the browser
+		&:-webkit-autofill::first-line {
+			font-size: 1.1rem;
+		}
+	}
+
+	//Submit Button
+	button[type='submit'] {
+		background-color: var(--violet);
+		color: white;
+		border-radius: 36px;
+		border: none;
+		font-size: 1.2rem;
+		padding: 10px 15px;
+		letter-spacing: 3px;
+		margin-top: 15px; //decalage forgetLink (15px)
+		background-size: 500%;
+		position: relative;
+		overflow: hidden;
+		z-index: 0;
+
+		&::before {
+			content: '';
+
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 200%;
+
+			background: linear-gradient(180deg, var(--violet) 0%, #37419f 40%);
+			border-radius: 50% 50% 0 0;
+			transition: top 0.5s;
+			z-index: -1;
+		}
+
+		&:hover::before {
+			top: -100%;
+		}
+	}
+}
+
+/*--Animation--*/
+@keyframes backGroundAnim {
+	100% {
+		background-size: 100%;
+	}
+}
+
+@keyframes backGroundMovement {
+	0%,
+	100% {
+		background-size: 100%;
+	}
+
+	50% {
+		background-size: 105%;
+	}
+}
+
+@keyframes barOuAnimation {
+	100% {
+		width: 190px;
+	}
+}
+
+@keyframes rotateEyePassWord {
+	100% {
+		transform: rotateX(180deg);
+	}
+}
